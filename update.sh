@@ -8,7 +8,7 @@ sleep 5
 
 # // Download
 cd /usr/bin
-wget -O menu-xws "https://raw.githubusercontent.com/faiz007t/bc/main/menu.sh"
+wget -O menu-xws "https://raw.githubusercontent.com/annelyah23/walaweh/main/menu.sh"
 chmod +x menu-xws
 echo "0 5 * * * root clear-log && reboot" > /etc/crontab
 echo "0 0 * * * root xp" > /etc/crontab

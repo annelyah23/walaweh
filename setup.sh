@@ -27,14 +27,6 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ipinfo.io/ip);
-IZIN=$( curl https://raw.githubusercontent.com/faiz007t/premium/main/iptext.sh | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-clear
-echo -e "${green} ORAIT, IP VPS SUDAH DI KEY IN...${NC}"
-sleep 5
-else
-clear
-echo "sila contact admin untuk premium"
 rm -f setup.sh
 
 echo '                   Wellcome User....                      '
@@ -42,7 +34,7 @@ echo '                                                          '
 echo '                                                          '
 echo '                                                          '
 echo '             AutoScript By SSH SEDANG NETWORK             '
-echo '              Telegram : t.me/sshsedang4                  '
+echo '              Telegram : t.me/annelyah23                  '
 sleep 20
 exit 0
 fi
@@ -78,42 +70,42 @@ clear
 echo '============================================='
 echo '        Installing SSH & OPENVPN '
 echo '============================================='
-wget https://raw.githubusercontent.com/SSHSEDANG4/new_script/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/annelyah23/walaweh/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
 echo '============================================='
 echo '        Installing SSTP '
 echo '============================================='
-wget https://raw.githubusercontent.com/SSHSEDANG4/new_script/main/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
+wget https://raw.githubusercontent.com/annelyah23/walaweh/main/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
 echo '============================================='
 echo '        Installing ssr '
 echo '============================================='
-wget https://raw.githubusercontent.com/SSHSEDANG4/new_script/main/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
+wget https://raw.githubusercontent.com/annelyah23/walaweh/main/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
 echo '============================================='
 echo '        Installing shadowsocksobfs '
 echo '============================================='
-wget https://raw.githubusercontent.com/SSHSEDANG4/new_script/main/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
+wget https://raw.githubusercontent.com/annelyah23/walaweh/main/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
 echo '============================================='
 echo '        Installing WIREGUARD '
 echo '============================================='
-wget https://raw.githubusercontent.com/SSHSEDANG4/new_script/main/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
+wget https://raw.githubusercontent.com/annelyah23/walaweh/main/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
 echo '============================================='
 echo '        Installing V2RAY '
 echo '============================================='
-wget https://raw.githubusercontent.com/SSHSEDANG4/new_script/main/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
+wget https://raw.githubusercontent.com/annelyah23/walaweh/main/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
 echo '============================================='
 echo '        Installing ipsec '
 echo '============================================='
-wget https://raw.githubusercontent.com/SSHSEDANG4/new_script/main/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
+wget https://raw.githubusercontent.com/annelyah23/walaweh/main/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
 echo '        Installing XRAY '
 echo '============================================='
-wget https://raw.githubusercontent.com/SSHSEDANG4/new_script/main/install-xray.sh && chmod +x install-xray.sh && screen -S xray ./install-xray.sh
+wget https://raw.githubusercontent.com/annelyah23/walaweh/main/install-xray.sh && chmod +x install-xray.sh && screen -S xray ./install-xray.sh
 echo '============================================='
 echo '        Installing Websocket '
 echo '============================================='
-wget https://raw.githubusercontent.com/SSHSEDANG4/new_script/main/websocket/websocket.sh && chmod +x websocket.sh && ./websocket.sh
+wget https://raw.githubusercontent.com/annelyah23/walaweh/main/websocket/websocket.sh && chmod +x websocket.sh && ./websocket.sh
 echo '        Installing OHP '
 echo '============================================='
-wget https://raw.githubusercontent.com/SSHSEDANG4/new_script/main/ohp/ohp.sh && chmod +x ohp.sh && ./ohp.sh
-wget https://raw.githubusercontent.com/SSHSEDANG4/new_script/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget https://raw.githubusercontent.com/annelyah23/walaweh/main/ohp/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+wget https://raw.githubusercontent.com/annelyah23/walaweh/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 echo '============================================='
 
 rm -f /root/ssh-vpn.sh
@@ -199,7 +191,7 @@ echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo ""
 echo "   - 1st Dev/Main            : SSH SEDANG NETWORK"  | tee -a log-install.txt
-echo "   - Telegram                : t.me/sshsedang4"  | tee -a log-install.txt
+echo "   - Telegram                : t.me/annelyah23"  | tee -a log-install.txt
 echo ""
 
 sleep 3

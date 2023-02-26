@@ -4,16 +4,6 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ipinfo.io/ip);
-IZIN=$( curl https://raw.githubusercontent.com/faiz007t/premium/main/iptext.sh | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-clear
-echo -e "${green} Please Wait, Proses...${NC}"
-sleep 5
-else
-echo "User premium Only ,Sila Contact Admin Bot😘"
-exit 0
-fi
-clear
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
 MYIP=$(wget -qO- ipinfo.io/ip);
@@ -31,7 +21,7 @@ organizationalunit=RAHCHIEL.xyz
 commonname=RAHCHIEL.xyz
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/faiz007t/bc/main/password"
+wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/annelyah23/walaweh/main/password"
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -89,7 +79,7 @@ ln -fs /usr/share/zoneinfo/Asia/Malaysia /etc/localtime
 sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 
 # install
-apt-get --reinstall --fix-missing install -y bzip2 gzip coreutils wget screen rsyslog iftop htop net-tools zip unzip wget net-tools curl nano sed screen gnupg gnupg1 bc apt-transport-https build-essential dirmngr libxml-parser-perl neofetch git lsof
+apt-get --reinstall --fix-missing install -y bzip2 gzip coreutils wget screen rsyslog iftop htop net-tools zip unzip wget net-tools curl nano sed screen gnupg gnupg1 walaweh apt-transport-https build-essential dirmngr libxml-parser-perl neofetch git lsof
 echo "clear" >> .profile
 echo "neofetch --ascii_distro Minix" >> .profile
 
@@ -98,14 +88,14 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/faiz007t/bc/main/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/annelyah23/walaweh/main/nginx.conf"
 mkdir -p /home/vps/public_html
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/faiz007t/bc/main/vps.conf"
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/annelyah23/walaweh/main/vps.conf"
 /etc/init.d/nginx restart
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/faiz007t/bc/main/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/annelyah23/walaweh/main/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -135,7 +125,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 # install squid
 cd
 apt -y install squid3
-wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/faiz007t/bc/main/squid3.conf"
+wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/annelyah23/walaweh/main/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # setting vnstat
@@ -189,7 +179,7 @@ sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 /etc/init.d/stunnel4 restart
 
 #OpenVPN
-wget https://raw.githubusercontent.com/faiz007t/bc/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+wget https://raw.githubusercontent.com/annelyah23/walaweh/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
 apt -y install fail2ban
@@ -227,58 +217,58 @@ netfilter-persistent reload
 
 # download script
 cd /usr/bin
-wget -O add-host "https://raw.githubusercontent.com/faiz007t/bc/main/add-host.sh"
-wget -O about "https://raw.githubusercontent.com/faiz007t/bc/main/about.sh"
-wget -O menu "https://raw.githubusercontent.com/faiz007t/bc/main/menu.sh"
-wget -O usernew "https://raw.githubusercontent.com/faiz007t/bc/main/usernew.sh"
-wget -O trial "https://raw.githubusercontent.com/faiz007t/bc/main/trial.sh"
-wget -O hapus "https://raw.githubusercontent.com/faiz007t/bc/main/hapus.sh"
-wget -O member "https://raw.githubusercontent.com/faiz007t/bc/main/member.sh"
-wget -O delete "https://raw.githubusercontent.com/faiz007t/bc/main/delete.sh"
-wget -O cek "https://raw.githubusercontent.com/faiz007t/bc/main/cek.sh"
-wget -O restart "https://raw.githubusercontent.com/faiz007t/bc/main/restart.sh"
-wget -O speedtest "https://raw.githubusercontent.com/faiz007t/bc/main/speedtest_cli.py"
-wget -O info "https://raw.githubusercontent.com/faiz007t/bc/main/info.sh"
-wget -O ram "https://raw.githubusercontent.com/faiz007t/bc/main/ram.sh"
-wget -O renew "https://raw.githubusercontent.com/faiz007t/bc/main/renew.sh"
-wget -O autokill "https://raw.githubusercontent.com/faiz007t/bc/main/autokill.sh"
-wget -O ceklim "https://raw.githubusercontent.com/faiz007t/bc/main/ceklim.sh"
-wget -O tendang "https://raw.githubusercontent.com/faiz007t/bc/main/tendang.sh"
-wget -O change-port "https://raw.githubusercontent.com/faiz007t/bc/main/change.sh"
-wget -O port-ovpn "https://raw.githubusercontent.com/faiz007t/bc/main/port-ovpn.sh"
-wget -O port-ssl "https://raw.githubusercontent.com/faiz007t/bc/main/port-ssl.sh"
-wget -O port-wg "https://raw.githubusercontent.com/faiz007t/bc/main/port-wg.sh"
-wget -O port-tr "https://raw.githubusercontent.com/faiz007t/bc/main/port-tr.sh"
-wget -O port-sstp "https://raw.githubusercontent.com/faiz007t/bc/main/port-sstp.sh"
-wget -O port-squid "https://raw.githubusercontent.com/faiz007t/bc/main/port-squid.sh"
-wget -O port-ws "https://raw.githubusercontent.com/faiz007t/bc/main/port-ws.sh"
-wget -O port-vless "https://raw.githubusercontent.com/faiz007t/bc/main/port-vless.sh"
-wget -O port-xray "https://raw.githubusercontent.com/faiz007t/bc/main/port-xray.sh"
-wget -O wbmn "https://raw.githubusercontent.com/faiz007t/bc/main/webmin.sh"
-wget -O xp "https://raw.githubusercontent.com/faiz007t/bc/main/xp.sh"
-wget -O menu-vmess "https://raw.githubusercontent.com/faiz007t/bc/main/menu-vmess.sh"
-wget -O menu-vless "https://raw.githubusercontent.com/faiz007t/bc/main/menu-vless.sh"
-wget -O menu-l2tp "https://raw.githubusercontent.com/faiz007t/bc/main/menu-l2tp.sh"
-wget -O menu-pptp "https://raw.githubusercontent.com/faiz007t/bc/main/menu-pptp.sh"
-wget -O menu-sstp "https://raw.githubusercontent.com/faiz007t/bc/main/menu-sstp.sh"
-wget -O menu-ss "https://raw.githubusercontent.com/faiz007t/bc/main/menu-ss.sh"
-wget -O menu-ssr "https://raw.githubusercontent.com/faiz007t/bc/main/menu-ssr.sh"
-wget -O menu-trojan "https://raw.githubusercontent.com/faiz007t/bc/main/menu-trojan.sh"
-wget -O menu-wg "https://raw.githubusercontent.com/faiz007t/bc/main/menu-wg.sh"
-wget -O menu-ssh "https://raw.githubusercontent.com/faiz007t/bc/main/menu-ssh.sh"
-wget -O menu-xray "https://raw.githubusercontent.com/faiz007t/bc/main/menu-xray.sh"
-wget -O running "https://raw.githubusercontent.com/faiz007t/bc/main/running.sh"
-wget -O menu-trgo "https://raw.githubusercontent.com/faiz007t/bc/main/menu-trgo.sh"
-wget -O add-dom "https://raw.githubusercontent.com/faiz007t/bc/main/cf/add-dom.sh"
-wget -O add-cff "https://raw.githubusercontent.com/faiz007t/bc/main/cf/add-cff.sh"
-wget -O add-cfh "https://raw.githubusercontent.com/faiz007t/bc/main/cf/add-cfh.sh"
-wget -O menu-cf "https://raw.githubusercontent.com/faiz007t/bc/main/menu-cf.sh"
-wget -O kernel-updt "https://raw.githubusercontent.com/faiz007t/bc/main/kernel-updt.sh"
-wget -O autoreboot "https://raw.githubusercontent.com/faiz007t/bc/main/autoreboot.sh"
-wget -O update "https://raw.githubusercontent.com/faiz007t/bc/main/update.sh"
-wget -O menu-trgo "https://raw.githubusercontent.com/faiz007t/bc/main/menu-trgo.sh"
-wget -O menu-xx "https://raw.githubusercontent.com/faiz007t/bc/main/menu-xx.sh"
-wget -O bbr "https://raw.githubusercontent.com/faiz007t/bc/main/bbr.sh"
+wget -O add-host "https://raw.githubusercontent.com/annelyah23/walaweh/main/add-host.sh"
+wget -O about "https://raw.githubusercontent.com/annelyah23/walaweh/main/about.sh"
+wget -O menu "https://raw.githubusercontent.com/annelyah23/walaweh/main/menu.sh"
+wget -O usernew "https://raw.githubusercontent.com/annelyah23/walaweh/main/usernew.sh"
+wget -O trial "https://raw.githubusercontent.com/annelyah23/walaweh/main/trial.sh"
+wget -O hapus "https://raw.githubusercontent.com/annelyah23/walaweh/main/hapus.sh"
+wget -O member "https://raw.githubusercontent.com/annelyah23/walaweh/main/member.sh"
+wget -O delete "https://raw.githubusercontent.com/annelyah23/walaweh/main/delete.sh"
+wget -O cek "https://raw.githubusercontent.com/annelyah23/walaweh/main/cek.sh"
+wget -O restart "https://raw.githubusercontent.com/annelyah23/walaweh/main/restart.sh"
+wget -O speedtest "https://raw.githubusercontent.com/annelyah23/walaweh/main/speedtest_cli.py"
+wget -O info "https://raw.githubusercontent.com/annelyah23/walaweh/main/info.sh"
+wget -O ram "https://raw.githubusercontent.com/annelyah23/walaweh/main/ram.sh"
+wget -O renew "https://raw.githubusercontent.com/annelyah23/walaweh/main/renew.sh"
+wget -O autokill "https://raw.githubusercontent.com/annelyah23/walaweh/main/autokill.sh"
+wget -O ceklim "https://raw.githubusercontent.com/annelyah23/walaweh/main/ceklim.sh"
+wget -O tendang "https://raw.githubusercontent.com/annelyah23/walaweh/main/tendang.sh"
+wget -O change-port "https://raw.githubusercontent.com/annelyah23/walaweh/main/change.sh"
+wget -O port-ovpn "https://raw.githubusercontent.com/annelyah23/walaweh/main/port-ovpn.sh"
+wget -O port-ssl "https://raw.githubusercontent.com/annelyah23/walaweh/main/port-ssl.sh"
+wget -O port-wg "https://raw.githubusercontent.com/annelyah23/walaweh/main/port-wg.sh"
+wget -O port-tr "https://raw.githubusercontent.com/annelyah23/walaweh/main/port-tr.sh"
+wget -O port-sstp "https://raw.githubusercontent.com/annelyah23/walaweh/main/port-sstp.sh"
+wget -O port-squid "https://raw.githubusercontent.com/annelyah23/walaweh/main/port-squid.sh"
+wget -O port-ws "https://raw.githubusercontent.com/annelyah23/walaweh/main/port-ws.sh"
+wget -O port-vless "https://raw.githubusercontent.com/annelyah23/walaweh/main/port-vless.sh"
+wget -O port-xray "https://raw.githubusercontent.com/annelyah23/walaweh/main/port-xray.sh"
+wget -O wbmn "https://raw.githubusercontent.com/annelyah23/walaweh/main/webmin.sh"
+wget -O xp "https://raw.githubusercontent.com/annelyah23/walaweh/main/xp.sh"
+wget -O menu-vmess "https://raw.githubusercontent.com/annelyah23/walaweh/main/menu-vmess.sh"
+wget -O menu-vless "https://raw.githubusercontent.com/annelyah23/walaweh/main/menu-vless.sh"
+wget -O menu-l2tp "https://raw.githubusercontent.com/annelyah23/walaweh/main/menu-l2tp.sh"
+wget -O menu-pptp "https://raw.githubusercontent.com/annelyah23/walaweh/main/menu-pptp.sh"
+wget -O menu-sstp "https://raw.githubusercontent.com/annelyah23/walaweh/main/menu-sstp.sh"
+wget -O menu-ss "https://raw.githubusercontent.com/annelyah23/walaweh/main/menu-ss.sh"
+wget -O menu-ssr "https://raw.githubusercontent.com/annelyah23/walaweh/main/menu-ssr.sh"
+wget -O menu-trojan "https://raw.githubusercontent.com/annelyah23/walaweh/main/menu-trojan.sh"
+wget -O menu-wg "https://raw.githubusercontent.com/annelyah23/walaweh/main/menu-wg.sh"
+wget -O menu-ssh "https://raw.githubusercontent.com/annelyah23/walaweh/main/menu-ssh.sh"
+wget -O menu-xray "https://raw.githubusercontent.com/annelyah23/walaweh/main/menu-xray.sh"
+wget -O running "https://raw.githubusercontent.com/annelyah23/walaweh/main/running.sh"
+wget -O menu-trgo "https://raw.githubusercontent.com/annelyah23/walaweh/main/menu-trgo.sh"
+wget -O add-dom "https://raw.githubusercontent.com/annelyah23/walaweh/main/cf/add-dom.sh"
+wget -O add-cff "https://raw.githubusercontent.com/annelyah23/walaweh/main/cf/add-cff.sh"
+wget -O add-cfh "https://raw.githubusercontent.com/annelyah23/walaweh/main/cf/add-cfh.sh"
+wget -O menu-cf "https://raw.githubusercontent.com/annelyah23/walaweh/main/menu-cf.sh"
+wget -O kernel-updt "https://raw.githubusercontent.com/annelyah23/walaweh/main/kernel-updt.sh"
+wget -O autoreboot "https://raw.githubusercontent.com/annelyah23/walaweh/main/autoreboot.sh"
+wget -O update "https://raw.githubusercontent.com/annelyah23/walaweh/main/update.sh"
+wget -O menu-trgo "https://raw.githubusercontent.com/annelyah23/walaweh/main/menu-trgo.sh"
+wget -O menu-xx "https://raw.githubusercontent.com/annelyah23/walaweh/main/menu-xx.sh"
+wget -O bbr "https://raw.githubusercontent.com/annelyah23/walaweh/main/bbr.sh"
 chmod +x bbr
 chmod +x menu-xx
 chmod +x menu-trgo

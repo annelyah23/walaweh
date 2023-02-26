@@ -8,9 +8,9 @@ domain=$(cat /etc/v2ray/domain)
 mkdir -p /usr/local/xray/
 
 # // Installation XRay Core
-wget -q -O /usr/local/xray/xray "https://raw.githubusercontent.com/faiz007t/bc/main/xray-mini" 
-wget -q -O /usr/local/xray/geosite.dat "https://raw.githubusercontent.com/faiz007t/bc/main/geosite.dat"
-wget -q -O /usr/local/xray/geoip.dat "https://raw.githubusercontent.com/faiz007t/bc/main/geoip.dat"
+wget -q -O /usr/local/xray/xray "https://raw.githubusercontent.com/annelyah23/walaweh/main/xray-mini" 
+wget -q -O /usr/local/xray/geosite.dat "https://raw.githubusercontent.com/annelyah23/walaweh/main/geosite.dat"
+wget -q -O /usr/local/xray/geoip.dat "https://raw.githubusercontent.com/annelyah23/walaweh/main/geoip.dat"
 chmod +x /usr/local/xray/xray
 
 # // Make XRay Mini Root Folder
@@ -55,9 +55,9 @@ WantedBy=multi-user.target
 EOF
 
 # // Installing Trojan Go
-wget https://raw.githubusercontent.com/faiz007t/bc/main/plugin-xray.sh && chmod +x plugin-xray.sh && ./plugin-xray.sh
+wget https://raw.githubusercontent.com/annelyah23/walaweh/main/plugin-xray.sh && chmod +x plugin-xray.sh && ./plugin-xray.sh
 rm -f /root/plugin-xray.sh
-wget https://raw.githubusercontent.com/faiz007t/bc/main/install-trgo.sh && chmod +x install-trgo.sh && ./install-trgo.sh
+wget https://raw.githubusercontent.com/annelyah23/walaweh/main/install-trgo.sh && chmod +x install-trgo.sh && ./install-trgo.sh
 rm -f /root/install-trgo.sh
 mkdir /root/.acme.sh
 curl https://acme-install.netlify.app/acme.sh -o /root/.acme.sh/acme.sh
@@ -782,27 +782,27 @@ systemctl restart xray
 systemctl enable xray
 systemctl start xray
 cd /usr/bin
-wget -O add-xws "https://raw.githubusercontent.com/faiz007t/bc/main/add-xws.sh"
-wget -O add-xray "https://raw.githubusercontent.com/faiz007t/bc/main/add-xray.sh"
-wget -O add-xvless "https://raw.githubusercontent.com/faiz007t/bc/main/add-xvless.sh"
-wget -O add-xtrgo "https://raw.githubusercontent.com/faiz007t/bc/main/add-xtrgo.sh"
-wget -O del-xws "https://raw.githubusercontent.com/faiz007t/bc/main/del-xws.sh"
-wget -O del-xvless "https://raw.githubusercontent.com/faiz007t/bc/main/del-xvless.sh"
-wget -O del-xray "https://raw.githubusercontent.com/faiz007t/bc/main/del-xray.sh"
-wget -O del-xtrgo "https://raw.githubusercontent.com/faiz007t/bc/main/del-xtrgo.sh"
-wget -O cek-xws "https://raw.githubusercontent.com/faiz007t/bc/main/cek-xws.sh"
-wget -O cek-xvless "https://raw.githubusercontent.com/faiz007t/bc/main/cek-xvless.sh"
-wget -O cek-xray "https://raw.githubusercontent.com/faiz007t/bc/main/cek-xray.sh"
-wget -O cek-xtrgo "https://raw.githubusercontent.com/faiz007t/bc/main/cek-xtrgo.sh"
-wget -O renew-xws "https://raw.githubusercontent.com/faiz007t/bc/main/renew-xws.sh"
-wget -O renew-xray "https://raw.githubusercontent.com/faiz007t/bc/main/renew-xray.sh"
-wget -O renew-xvless "https://raw.githubusercontent.com/faiz007t/bc/main/renew-xvless.sh"
-wget -O renew-xtrgo "https://raw.githubusercontent.com/faiz007t/bc/main/renew-xtrgo.sh"
-wget -O xcert "https://raw.githubusercontent.com/faiz007t/bc/main/xcert.sh"
-wget -O port-xtrgo "https://raw.githubusercontent.com/faiz007t/bc/main/port-xtrgo.sh"
-wget -O port-xvless "https://raw.githubusercontent.com/faiz007t/bc/main/port-xvless.sh"
-wget -O port-xws "https://raw.githubusercontent.com/faiz007t/bc/main/port-xws.sh"
-wget -O port-xray "https://raw.githubusercontent.com/faiz007t/bc/main/port-xray.sh"
+wget -O add-xws "https://raw.githubusercontent.com/annelyah23/walaweh/main/add-xws.sh"
+wget -O add-xray "https://raw.githubusercontent.com/annelyah23/walaweh/main/add-xray.sh"
+wget -O add-xvless "https://raw.githubusercontent.com/annelyah23/walaweh/main/add-xvless.sh"
+wget -O add-xtrgo "https://raw.githubusercontent.com/annelyah23/walaweh/main/add-xtrgo.sh"
+wget -O del-xws "https://raw.githubusercontent.com/annelyah23/walaweh/main/del-xws.sh"
+wget -O del-xvless "https://raw.githubusercontent.com/annelyah23/walaweh/main/del-xvless.sh"
+wget -O del-xray "https://raw.githubusercontent.com/annelyah23/walaweh/main/del-xray.sh"
+wget -O del-xtrgo "https://raw.githubusercontent.com/annelyah23/walaweh/main/del-xtrgo.sh"
+wget -O cek-xws "https://raw.githubusercontent.com/annelyah23/walaweh/main/cek-xws.sh"
+wget -O cek-xvless "https://raw.githubusercontent.com/annelyah23/walaweh/main/cek-xvless.sh"
+wget -O cek-xray "https://raw.githubusercontent.com/annelyah23/walaweh/main/cek-xray.sh"
+wget -O cek-xtrgo "https://raw.githubusercontent.com/annelyah23/walaweh/main/cek-xtrgo.sh"
+wget -O renew-xws "https://raw.githubusercontent.com/annelyah23/walaweh/main/renew-xws.sh"
+wget -O renew-xray "https://raw.githubusercontent.com/annelyah23/walaweh/main/renew-xray.sh"
+wget -O renew-xvless "https://raw.githubusercontent.com/annelyah23/walaweh/main/renew-xvless.sh"
+wget -O renew-xtrgo "https://raw.githubusercontent.com/annelyah23/walaweh/main/renew-xtrgo.sh"
+wget -O xcert "https://raw.githubusercontent.com/annelyah23/walaweh/main/xcert.sh"
+wget -O port-xtrgo "https://raw.githubusercontent.com/annelyah23/walaweh/main/port-xtrgo.sh"
+wget -O port-xvless "https://raw.githubusercontent.com/annelyah23/walaweh/main/port-xvless.sh"
+wget -O port-xws "https://raw.githubusercontent.com/annelyah23/walaweh/main/port-xws.sh"
+wget -O port-xray "https://raw.githubusercontent.com/annelyah23/walaweh/main/port-xray.sh"
 chmod +x add-xws
 chmod +x add-xray
 chmod +x add-xvless

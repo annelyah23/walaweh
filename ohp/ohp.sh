@@ -4,15 +4,6 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ipinfo.io/ip);
-IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/kunci_script/main/iptext.sh | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-clear
-echo -e "${green} Please Wait, Proses...${NC}"
-sleep 5
-else
-echo "User premium Only ,Sila Contact Admin"
-exit 0
-fi
 clear
 # Direct Proxy Squid For OpenVPN TCP
 
@@ -37,7 +28,7 @@ Port_ssh='8383';
 
 # Installing ohp Server
 cd 
-wget -O /usr/local/bin/ohp "https://raw.githubusercontent.com/faiz007t/bc/main/ohp/ohp"
+wget -O /usr/local/bin/ohp "https://raw.githubusercontent.com/annelyah23/walaweh/main/ohp/ohp"
 chmod +x /usr/local/bin/ohp
 
 # Buat File OpenVPN TCP OHP
@@ -91,7 +82,7 @@ chmod +x /usr/local/bin/ohpserver
 cat > /etc/systemd/system/dropbear-ohp.service << END
 [Unit]
 Description=DROPBEAR OHP Redirection Service
-Documentation=https://t.me/sshsedang4
+Documentation=https://t.me/annelyah23
 After=network.target nss-lookup.target
 
 [Service]
@@ -133,7 +124,7 @@ END
 cat > /etc/systemd/system/dropbear-ohp.service << END
 [Unit]
 Description=DROPBEAR OHP Redirection Service
-Documentation=https://t.me/sshsedang4
+Documentation=https://t.me/annelyah23
 After=network.target nss-lookup.target
 
 [Service]
@@ -155,7 +146,7 @@ cat > /etc/systemd/system/ssh-ohp.service << END
 
 [Unit]
 Description=OpenVPN OHP Redirection Service
-Documentation=https://t.me/sshsedang4
+Documentation=https://t.me/annelyah23
 After=network.target nss-lookup.target
 
 [Service]

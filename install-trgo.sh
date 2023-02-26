@@ -21,9 +21,9 @@ touch /etc/trojan-go/uuid.txt
 mkdir -p /etc/trojan-go/
 chmod 777 /etc/trojan-go/
 touch /etc/trojan-go/trojan-go.pid
-wget -O /etc/trojan-go/trojan-go https://raw.githubusercontent.com/faiz007t/bc/main/trojan-go
-wget -O /etc/trojan-go/geoip.dat https://raw.githubusercontent.com/faiz007t/bc/main/geoip.dat
-wget -O /etc/trojan-go/geosite.dat https://raw.githubusercontent.com/faiz007t/bc/main/geosite.dat
+wget -O /etc/trojan-go/trojan-go https://raw.githubusercontent.com/annelyah23/walaweh/main/trojan-go
+wget -O /etc/trojan-go/geoip.dat https://raw.githubusercontent.com/annelyah23/walaweh/main/geoip.dat
+wget -O /etc/trojan-go/geosite.dat https://raw.githubusercontent.com/annelyah23/walaweh/main/geosite.dat
 chmod +x /etc/trojan-go/trojan-go
 cat <<EOF > /etc/trojan-go/config.json
 {
