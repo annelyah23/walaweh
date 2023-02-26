@@ -35,9 +35,7 @@ echo '                                                          '
 echo '                                                          '
 echo '             AutoScript By SSH SEDANG NETWORK             '
 echo '              Telegram : t.me/annelyah23                  '
-sleep 20
-exit 0
-fi
+sleep 2
 echo '============================================='
 echo '         Silakan Tunggu sebentar '
 echo 'Process Update & Upgrade Sedang Dijalankan '
